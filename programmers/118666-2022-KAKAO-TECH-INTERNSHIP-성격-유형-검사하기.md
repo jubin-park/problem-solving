@@ -1,4 +1,3 @@
-
 # 성격 유형 검사하기
 * 범주: 2022 KAKAO TECH INTERNSHIP
 * 레벨: 1
