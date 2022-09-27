@@ -1,11 +1,13 @@
 # 56. Merge Intervals
-* Topics: Array, Sorting
+* Topics: `Array` and `Sorting`
 * Level: Medium
 * Date: 2021-12-24
-* Duration to solve: N/A
-* Link: https://leetcode.com/problems/merge-intervals/
+* Elapsed Time: N/A
+* Problem Link: https://leetcode.com/problems/merge-intervals/
 
-# Idea #1: Brute-force
+# Solution
+
+## Idea #1: Brute-force
 1. 10001 길이의 flag bool 배열을 생성하고 모두 false로 초기화한다. 시간복잡도는 $O(N)$.
 3. 범위에 속한 모든 숫자들을 배열의 인덱스에 대응시켜 flag를 true로 설정한다. 시간복잡도는 $O(N^2)$.
 4. flag가 false인 부분을 기준으로 split하여, flag가 true인 구간들을 구한다. 시간복잡도는 $O(N)$.
@@ -14,7 +16,7 @@
 
 여기서는 N이 $10000$ 까지지만, 더 커지면 비효율적일 것이다.
 
-# Idea #2: Greedy
+## Idea #2: Greedy
 1. 구간 쌍 [start, end] 을 정렬한다. 정렬할 때 std::sort를 사용했다. 시간복잡도는 $O(NlogN)$.
    1. start 값이 같은 경우, end 오름차순
    2. start 값이 다른 경우, start 오름차순
@@ -26,7 +28,6 @@
 최종 시간복잡도: $O(NlogN)$
 
 # Source Code
-
 ```cpp
 bool compare(const vector<int>& lhs, const vector<int>& rhs)
 {
