@@ -2,13 +2,11 @@
 * Topic: 
 * Level: 
 * Date: 2022-00-00
-* Elapsed time: 
+* Elapsed Time: 
 * Problem Link: 
 
 # Solution
-```
 
-```
 
 # Source Code
 ```cpp
