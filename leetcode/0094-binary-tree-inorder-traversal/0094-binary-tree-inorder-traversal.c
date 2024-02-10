@@ -24,9 +24,11 @@ void recursive(struct TreeNode* root, int* places, int* returnSize)
     if (root == NULL)
         return;
     
-    recursive(root->left, places, returnSize);
+    if (root->left)
+        recursive(root->left, places, returnSize);
 
     places[(*returnSize)++] = root->val;
 
-    recursive(root->right, places, returnSize);
+    if (root->right)
+        recursive(root->right, places, returnSize);
 }
